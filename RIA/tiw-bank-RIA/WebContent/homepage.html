@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Login page</title>
+	<link rel="stylesheet" type="text/css" media="all" href="./CSS/homepage.css"/>
+	<script src="utils.js" charset="utf-8" defer></script>
+	<script src="homeScript.js" charset="utf-8" defer></script>
+</head>
+<body>
+	<div class="flexTitle">
+		<div>
+			<h1>Welcome to the TIW BANK Home Page</h1>
+			<p>Nice to see you again <span id="id_username">user</span></p>
+		</div>
+		<div class="logout">
+			<a href="Logout" id="logout">Logout</a>
+		</div>
+	</div>
+
+	<div id="id_alert"></div>
+	<div class="flex">
+		<section>
+			<table id="accountList" border="1" class='boxed'>
+				<thead>
+				<tr>
+					<th>Account ID</th>
+					<th>Balance</th>
+				</tr>
+				</thead>
+				<tbody id="id_listcontainerbody">
+				</tbody>
+			</table>
+		</section>
+		<aside>
+			<table id="id_transfersListcontainer" border="1" class="boxed">
+				<thead>
+				<tr>
+					<th>id</th>
+					<th>Source</th>
+					<th>Destination</th>
+					<th>Amount</th>
+					<th>Date</th>
+				</tr>
+				</thead>
+				<tbody id = "id_transfersListcontainerbody">
+				</tbody>
+			</table>
+		</aside>
+	</div>
+	<div id="formDiv">
+		<form id="form" action="#" method="POST" autocomplete="off">
+			<fieldset>
+				<p>
+					<label>Receiver user id: </label>
+					<span class="autocomplete">
+						<input id="myInput" type="text" name="userDest" required />
+					</span>
+				</p>
+				<p>
+					<label>Receiver bank account:</label>
+					<input type="text" name="destination" required /> </p>
+				<p>
+					<label>Description: </label>
+					<input type="text" name="description" required /> </p>
+				<p>
+					<label>Amount: </label>
+					<input type="text" name="amount" required /> </p>
+
+				<input type="hidden" name="bankID" />
+
+				<input id="submitTransfer" type="submit" name="Send transfer" value="Send transfer request">
+				<button id="addressBookBtn" type="button" name="Add contact" value="SaveContact" >Save contact</button>
+			</fieldset>
+		</form>
+		<div>
+			<table id="id_summary" border="1" class="boxed">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Source</th>
+						<th>Destination</th>
+					</tr>
+				</thead>
+				<tbody id = "id_summarybody">
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div id="errorMsg">
+	</div>
+</body>
+</html>

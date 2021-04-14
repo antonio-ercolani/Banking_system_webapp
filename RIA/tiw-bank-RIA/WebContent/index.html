@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Login page</title>
+	<link rel="stylesheet" type="text/css" media="all" href="./CSS/login.css" />
+	<script src="utils.js" charset="utf-8" defer></script>
+	<script src="login.js" charset="utf-8" defer></script>
+</head>
+<body>
+	<h1>TIW BANK</h1>
+	<h2>Please log in</h2>
+
+	<form action="#">
+	<fieldset>
+		<br>
+		Username: <input type="text" name="username" required> <br>
+		Password: <input type="password" name="pwd" required><br>
+		<input id="loginbutton" type="button" value="login">
+		<p id="errorlogmessage"></p>
+	</fieldset></form>
+	<br>
+	<p id = "registerLink">Non sei ancora registrato? Clicca qui.</p>
+
+	<form id = "registerform" action="#">
+		Username: <input type="text" name="username" required> <br>
+		Password: <input type="password" name="pwd" id="pwd" required><br>
+		Repeat password: <input type="password" name="repeatpwd" id="repeatpwd" required><br>
+		Name: <input type="text" name="name" required><br>
+		Surname: <input type="text" name="surname" required><br>
+		Email: <input type="text" name="email" id="email" required><br>
+		<input id="registerbutton" type="button" value="register">
+		<p id="regmessage"></p>
+	</form>
+</body>
+</html>

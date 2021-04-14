@@ -1,0 +1,117 @@
+body {
+    margin: auto;
+    padding: 10px;
+    font-family: "Roboto Light", sans-serif;
+}
+form  {
+    display: table;
+}
+
+p {
+    display: table-row;
+}
+
+label {
+    display: table-cell;
+    padding-right: 10px;
+}
+
+input {
+    display: table-cell;
+}
+
+section {
+    background-color: darkcyan;
+    flex: 0 0 40%;
+}
+
+aside {
+    background-color: cornflowerblue;
+    flex: 1;
+}
+
+.logout {
+    padding-top: 20px;
+    padding-right: 10px;
+}
+
+.flexTitle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex {
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#formDiv {
+    background-color: #7FFFD4;
+    display: flex;
+}
+
+#submitTransfer {
+    margin-top: 20px;
+}
+
+#errorMsg {
+    color: rgba(255,21,23,0.77);
+}
+
+.hideBtn {
+    display: none;
+}
+
+.showBtn {
+    display: inline;
+}
+
+/*the container must be positioned relative:*/
+.autocomplete {
+    position: relative;
+    display: inline-block;
+}
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.autocomplete-items div {
+    padding: 5px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+    font-size: 14px;
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+    background-color: #e9e9e9;
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+    background-color: DodgerBlue;
+    color: #ffffff;
+}
+
+#logout {	
+  font: bold 14px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
