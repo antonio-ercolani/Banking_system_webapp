@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+<link rel="stylesheet" type="text/css" media="all" href="../css/homepage.css" th:href="@{/css/homepage.css}" />
+</head>
+<body>
+	<div align="right">
+		<a id="logout" th:href="@{/Logout}">Logout</a>
+	</div>
+	<h1>Home Page</h1>
+	<p>Nice to see you again <span th:text="${session.user.name}"></span></p>
+	<p>Select one of your accounts:</p>
+	<table border="1" th:class='account_table'>
+		<thead>
+			<tr>
+				<th>Account ID</th>
+				<th>Balance</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="account : ${accounts}">
+				<td><a href="accountinfopage.html"
+					th:href="@{/CheckOwnership(bank_id=${account.id})}"><span
+						th:text="${account.id}"></span></a></td>
+				<td th:text="${account.balance}"></td>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+</html>

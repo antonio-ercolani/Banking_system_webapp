@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" media="all" href="../css/mystyle.css" th:href="@{/css/mystyle.css}" />
+    <title>Transfer Error</title>
+</head>
+<body>
+<div class="wrap">
+    <div class="main">
+        <h1>Transfer Error</h1>
+    </div>
+    <div class="top_right">
+        <a id="logout" align="right" href="AccountInfoPage.html" th:href="@{/GoToAccountInfo}">Account Info </a>
+        <br>
+        <br>
+        <a id="logout" th:href="@{/Logout}">Logout</a>
+    </div>
+</div>
+
+    <p>    <span th:text="${session.user.username}">user</span>
+        there was an error with your transaction.<br>
+        Here is the details about it.
+    </p>
+    <div th:switch="${errorType}">
+        <p th:case="1">The amount you had indicated isn't a valid number.</p>
+        <p th:case="2">You don't have enough funds on your account.</p>
+        <p th:case="3">The destination user name doesn't match the bank ID you indicated.</p>
+        <p th:case="4">The destination bank account doesn't exist.</p>
+        <p th:case="5">The user doesen't exist.</p>
+        <p th:case="6">You can't make a transfer between the same account.</p>
+        <p th:case="7">Wrong format.</p>
+        <p th:case="*">An error occurred.</p>
+    </div>
+
+</body>
+</html>

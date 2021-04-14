@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>AccountInfo</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../css/accountInfoPageStyle.css" th:href="@{/css/accountInfoPageStyle.css}" />
+</head>
+<body id="body">
+	<div align="right">
+		<a id="logout" th:href="@{/GoToHomePage}">Go to home page</a>
+		<br>
+    	<br>
+		<a id="logout" th:href="@{/Logout}">Logout</a>
+	</div>
+	<h1>Account Info Page</h1>
+	
+	<p th:text="${'Information about bank account n. ' + bankId}"></p>
+	<p id="balance" th:text="${'BALANCE : ' + balance}"> </p>
+	<br>
+	<p> Transaction history </p>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Transfer id</th>
+				<th>Source</th>
+				<th>Destination</th>
+				<th>Amount</th>
+				<th>Date</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="t: ${transfers}">
+				<td th:text="${t.id}"></td>
+				<td th:text="${ t.source}"></td>
+				<td th:text="${ t.destination}"></td>
+				<td th:text="${ t.amount}"></td>
+				<td th:text="${ t.date }"></td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<br>
+	
+	<p>NEW TRANSFER FORM</p>
+		<form id="form" action="#" th:action="@{/CheckTransfer}" method="POST">
+			<fieldset>
+				<p> Receiver user id: <input type="text" name="userDest" required /> </p>
+				<p>	Receiver bank account: <input type="text" name="destination" required /> </p>
+				<p>	Description: <input type="text" name="description" required /> </p>	
+				<p>	Amount: <input type="text" name="amount" required /> </p>
+				
+				<input type="submit" name="Send transfer" value="Send transfer request">
+			</fieldset>
+		</form>
+
+
+</body>
+</html>

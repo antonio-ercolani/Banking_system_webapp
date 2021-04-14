@@ -1,0 +1,55 @@
+@charset "ISO-8859-1";
+
+#logout {
+	
+  font: bold 14px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+
+#body {
+	font: 14px Helvetica;
+}
+
+#balance {
+	font: bold 16px Helvetica;
+	border-style : solid;
+	border-width : 10px;
+	width:200px; 
+	padding: 2px 6px 2px 6px;
+  	border-top: 1px solid #CCCCCC;
+  	border-right: 1px solid #333333;
+  	border-bottom: 1px solid #333333;
+  	border-left: 1px solid #CCCCCC;
+}
+
+th, tr {
+  border: 1px solid black;
+  padding: 2px 6px 2px 6px;
+}
+
+table {
+	border: 1px solid black;
+}
+
+#form {
+	font: bold 14px Helvetica;
+	
+	border-width : 10px;
+	width:500px; 
+	padding: 2px 6px 2px 6px;
+  	
+}
+
+
+
+
+
+
+

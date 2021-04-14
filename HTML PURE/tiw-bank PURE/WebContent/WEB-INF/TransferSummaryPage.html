@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" media="all" href="../css/mystyle.css" th:href="@{/css/mystyle.css}" />
+    <title>Transfer successful</title>
+</head>
+<body>
+    <div class="wrap">
+        <div class="main">
+            <h1>Transfer Successful</h1>
+        </div>
+        <div class="top_right">
+            <a id="logout" align="right" href="AccountInfoPage.html" th:href="@{/GoToAccountInfo}">Account Info </a>
+            <br>
+            <br>
+            <a id="logout" th:href="@{/Logout}">Logout</a>
+        </div>
+    </div>
+    <p>
+        The transfer has been executed correctly.<br>Here is the details about it.
+    </p>
+    <table class="table-fill">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th class="text-left"><span th:text="${session.user.id}">user ID</span></th>
+            <th class="text-left"><span th:text="${userDest.id}">dest ID</span></th>
+        </tr>
+        </thead>
+        <tbody class="table-hover">
+        <tr>
+            <th class="text-left">Name</th>
+            <td class="text-left" th:text="${session.user.name}"></td>
+            <td class="text-left" th:text="${userDest.name}"></td>
+        </tr>
+        <tr>
+            <th class="text-left">Surname</th>
+            <td class="text-left" th:text="${session.user.surname}"></td>
+            <td class="text-left" th:text="${userDest.surname}"></td>
+        </tr>
+        <tr>
+            <th class="text-left">Balance</th>
+            <td class="text-left" th:text="${source_balance}"></td>
+            <td class="text-left" th:text="${destination_balance}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+</body>
+</html>
